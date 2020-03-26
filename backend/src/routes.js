@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import OngController from '@controllers/OngController';
 import IncidentController from '@controllers/IncidentController';
+import OngController from '@controllers/OngController';
 import ProfileController from '@controllers/ProfileController';
 import SessionController from '@controllers/SessionController';
 
@@ -11,7 +11,7 @@ routes.get('/', async (req, res) => {
   res.json({ 'hello world!': true });
 });
 
-routes.post('/sessions', SessionController.store)
+routes.post('/sessions', SessionController.store);
 
 routes.post('/ongs', OngController.store);
 routes.get('/ongs', OngController.index);
