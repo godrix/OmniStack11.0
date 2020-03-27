@@ -18,6 +18,22 @@ module.exports = {
     },
   },
 
+  test: {
+    client: 'postgresql',
+    connection: {
+      database: 'omni11_test',
+      user: 'postgres',
+      password: 'root',
+    },
+    pool: {
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: 'knex_migrations',
+      directory: './src/database/migrations',
+    },
+  },
   staging: {
     client: 'postgresql',
     connection: {

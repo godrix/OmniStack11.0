@@ -1,6 +1,7 @@
-import 'dotenv/config';
+// import 'dotenv/config';
 import express from 'express';
 
+import { errors } from 'celebrate';
 import cors from 'cors';
 
 import routes from './routes';
@@ -17,6 +18,7 @@ class App {
   middlewares() {
     this.server.use(express.json());
     this.server.use(cors());
+    this.server.use(errors());
   }
 
   routes() {
